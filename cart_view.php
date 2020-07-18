@@ -197,9 +197,9 @@ function getTotal(){
             token: function (token) {
                 // You can access the token ID with `token.id`.
                 // Get the token ID to your server-side code for use.
-                console.log('Token Created!!');
-                console.log(token)
-                $('#token_response').html(JSON.stringify(token));
+                // console.log('Token Created!!');
+                // console.log(token)
+                // $('#token_response').html(JSON.stringify(token));
 
                 $.ajax({
                     url:"payment.php",
@@ -215,8 +215,8 @@ function getTotal(){
         });
 
         handler.open({
-            name: 'Demo Site',
-            description: '2 widgets',
+            name: 'Clear the payment',
+
             amount: amount * 1
         });
     }
