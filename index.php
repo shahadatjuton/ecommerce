@@ -1,5 +1,12 @@
+
 <?php include 'includes/session.php'; ?>
 <?php include 'includes/header.php'; ?>
+<style>
+    .carousel-inner > .item > img {
+        width:1360px;
+        height:460px;
+    }
+</style>
 <body class="hold-transition skin-blue layout-top-nav">
 <div class="wrapper">
 
@@ -28,24 +35,15 @@
 		                  <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
 		                  <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
 		                </ol>
-		                <div class="carousel-inner">
+		                <div class="carousel-inner" style="margin-bottom: 20px;">
 		                  <div class="item active">
-		                    <img src="images/banner/banner-1.jpg" alt="First slide">
+		                    <img src="images/banner/slider1.jpg" alt="First slide" height="460" width="1438">
 		                  </div>
 		                  <div class="item">
-		                    <img src="images/banner/banner-2.jpg" alt="Second slide">
+		                    <img src="images/banner/slider2.jpg" alt="Second slide" height="460" width="1438">
 		                  </div>
 		                  <div class="item">
-		                    <img src="images/banner/banner-3.jpg" alt="Second slide">
-		                  </div>
-		                  <div class="item">
-		                    <img src="images/banner/banner-4.jpg" alt="Second slide">
-		                  </div>
-		                  <div class="item">
-		                    <img src="images/banner/banner-5.jpg" alt="Second slide">
-		                  </div>
-						  <div class="item">
-		                    <img src="images/banner/banner-6.jpg" alt="Second slide">
+		                    <img src="images/banner/slider3.jpg" alt="Second slide" height="460" width="1438">
 		                  </div>
 		                </div>
 		                <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
@@ -68,19 +66,7 @@
 						    	$image = (!empty($row['photo'])) ? 'images/'.$row['photo'] : 'images/noimage.jpg';
 						    	$inc = ($inc == 3) ? 1 : $inc + 1;
 	       						if($inc == 1) echo "<div class='row'>";
-	       						echo "
-	       							<div class='col-sm-4'>
-	       								<div class='box box-solid'>
-		       								<div class='box-body prod-body'>
-		       									<img src='".$image."' width='100%' height='230px' class='thumbnail'>
-		       									<h5><a href='product.php?product=".$row['slug']."'>".$row['name']."</a></h5>
-		       								</div>
-		       								<div class='box-footer'>
-		       									<b>&#36; ".number_format($row['price'], 2)."</b>
-		       								</div>
-	       								</div>
-	       							</div>
-	       						";
+
 	       						if($inc == 3) echo "</div>";
 						    }
 						    if($inc == 1) echo "<div class='col-sm-4'></div><div class='col-sm-4'></div></div>"; 
@@ -96,7 +82,7 @@
 	        	</div>
 	        </div>
               <div class="row">
-                  <div class="col-sm-9">
+                  <div class="col-sm-10">
                       <?php
                       $conn = $pdo->open();
                       try{
@@ -131,7 +117,7 @@
                       $pdo->close();
                       ?>
                   </div>
-                  <div class="col-sm-3">
+                  <div class="col-sm-2">
                       <?php include 'includes/sidebar.php'; ?>
                   </div>
               </div>

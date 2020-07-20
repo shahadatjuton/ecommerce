@@ -55,7 +55,7 @@ if(isset($_SESSION['user'])){
                             <div class="container">
 
                                 <div class="row">
-                                    <div class="col-md-12"><pre id="token_response"></pre></div>
+                                    <div class="col-md-12"><div id="token_response"></div></div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-4">
@@ -200,7 +200,7 @@ function getTotal(){
                 // console.log('Token Created!!');
                 // console.log(token)
                 // $('#token_response').html(JSON.stringify(token));
-
+                // append
                 $.ajax({
                     url:"payment.php",
                     method: 'post',
@@ -222,7 +222,7 @@ function getTotal(){
     }
 </script>
 
-<!--<!-- Paypal Express -->-->
+<!-- Paypal Express -->
 <!--<script>-->
 <!--paypal.Button.render({-->
 <!--    env: 'sandbox', // change for production if app is live,-->

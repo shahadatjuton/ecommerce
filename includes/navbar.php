@@ -2,15 +2,18 @@
   <nav style="padding: 10px 0;" class="navbar navbar-static-top">
     <div class="container">
       <div class="navbar-header">
-        <a style="padding-top: 0" href="index.php" class="navbar-brand"><img style="width: 200px; height: 50px;" src="images/logo/logo.png" alt=""></a>
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+<!--        <a style="padding-top: 0" href="index.php" class="navbar-brand"><img style="width: 200px; height: 50px;" src="images/logo/logo.png" alt=""></a>-->
+<!--        <h2>E-mart</h2>-->
+          <a style="padding-top: 0;" href="index.php" ><h2>E-Mart</h2></a>
+
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
           <i class="fa fa-bars"></i>
         </button>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
-        <ul class="nav navbar-nav">
+      <div class="collapse navbar-collapse pull-left" id="navbar-collapse" style="margin-left: 50px;">
+        <ul class="nav navbar-nav" >
           <li><a href="index.php">HOME</a></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">CATEGORY <span class="caret"></span></a>
